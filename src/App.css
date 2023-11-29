@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+:root {
+  --bg-color: #333;
+}
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.header h1 {
+  font-size: 3rem;
+  border-right: 3px solid white;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s steps(70, end), blink-border 1s step-end infinite;
+}
+
+#hero a {
+  padding: 10px;
+  font-size: 2rem;
+  border: 1px solid white;
+  border-radius: 8px;
+  opacity: 1;
+
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff,
+    0 0 80px #fff, 0 0 90px #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+
+  animation-name: fade-in;
+  animation-delay: 5s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  z-index: 1;
+}
+
+#hero a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.content-load-animation {
+  animation-name: fade-in-from-bottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 1300px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  #hero a {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1rem;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-border {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(20vh);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

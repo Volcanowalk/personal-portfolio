@@ -1,0 +1,40 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-top: 5%;
+  opacity: 0;
+}
+
+#contact p {
+  margin-top: 5%;
+  font-size: 1rem;
+}
+
+#contact p:first-of-type {
+  margin-top: 10%;
+}
+
+#contact span {
+  font-size: 3rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 2vw;
+}
+
+@media (max-width: 800px) {
+  #projects {
+    padding-top: 10%;
+  }
+
+  #contact span {
+    font-size: 1rem;
+  }
+
+  #contact p {
+    text-align: center;
+  }
+}
