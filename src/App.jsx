@@ -9,8 +9,11 @@ function App() {
     <>
       <Navbar />
       <section id="hero">
-        <div className="header">
-          <h1>Hello! My name is Heon Sang Lee, a front-end developer!</h1>
+        <div className="hero-text1">
+          <h1>Hello! My name is Heon Sang Lee, </h1>
+        </div>
+        <div className="hero-text2">
+          <h1>Front-end Developer!</h1>
         </div>
         <a href="#about">ABOUT ME</a>
       </section>
