@@ -13,8 +13,10 @@ import {
   FaGitAlt,
   FaCog,
   FaFigma,
+  FaNpm,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
+import { SiEslint } from "react-icons/si";
 import { useInView } from "react-intersection-observer";
 
 export default function About() {
@@ -38,9 +40,9 @@ export default function About() {
             College.
           </p>
           <p>
-            During my school years, I learned many languages and programming
-            principles. The experience and knowledge from the school years gave
-            me a fast-learning ability for coding related topics.
+            During my school years, I learned many programming languages and
+            programming principles. The experience and knowledge from the school
+            years gave me a fast-learning ability for coding related topics.
           </p>
           <p>
             While working as a full-time IT Support Analyst, I decided to learn
@@ -78,44 +80,52 @@ export default function About() {
         ref={skillsRef}
       >
         <div className="container-skill">
-          <FaHtml5 fontSize="4rem" />
+          <FaHtml5 className="skill-image" aria-hidden="true" />
           HTML
         </div>
         <div className="container-skill">
-          <FaCss3Alt fontSize="4rem" />
+          <FaCss3Alt className="skill-image" aria-hidden="true" />
           CSS
         </div>
         <div className="container-skill">
-          <IoLogoJavascript fontSize="4rem" />
+          <IoLogoJavascript className="skill-image" aria-hidden="true" />
           JavaScript
         </div>
         <div className="container-skill">
-          <FaReact fontSize="4rem" />
+          <FaReact className="skill-image" aria-hidden="true" />
           React
         </div>
         <div className="container-skill">
-          <FaMobileAlt fontSize="4rem" />
+          <FaMobileAlt className="skill-image" aria-hidden="true" />
           Responsive Design
         </div>
         <div className="container-skill">
-          <FaUniversalAccess fontSize="4rem" />
+          <FaUniversalAccess className="skill-image" aria-hidden="true" />
           Accessibility
         </div>
         <div className="container-skill">
-          <FaJava fontSize="4rem" />
+          <FaJava className="skill-image" aria-hidden="true" />
           Java
         </div>
         <div className="container-skill">
-          <FaGitAlt fontSize="4rem" />
+          <FaGitAlt className="skill-image" aria-hidden="true" />
           Git
         </div>
         <div className="container-skill">
-          <FaCog fontSize="4rem" />
+          <FaCog className="skill-image" aria-hidden="true" />
           API
         </div>
         <div className="container-skill">
-          <FaFigma fontSize="4rem" />
+          <FaFigma className="skill-image" aria-hidden="true" />
           Figma
+        </div>
+        <div className="container-skill">
+          <FaNpm className="skill-image" aria-hidden="true" />
+          NPM
+        </div>
+        <div className="container-skill">
+          <SiEslint className="skill-image" aria-hidden="true" />
+          ESLint
         </div>
       </div>
     </section>

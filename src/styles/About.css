@@ -72,6 +72,10 @@ h2::after {
   gap: 5px;
 }
 
+.skill-image {
+  font-size: 4rem;
+}
+
 @media (max-width: 800px) {
   #about {
     padding-top: 10%;
@@ -98,5 +102,9 @@ h2::after {
 
   .container-skills {
     width: 80%;
+  }
+
+  .skill-image {
+    font-size: 3rem;
   }
 }
