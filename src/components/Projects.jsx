@@ -4,6 +4,7 @@ import WeatherAppImage from "../assets/weatherapp.png";
 import TodoAppImage from "../assets/todoapp.png";
 import CalculatorImage from "../assets/calculator.png";
 import SketchAppImage from "../assets/etchasketch.png";
+import RAWGApp from "../assets/volcanowalkRAWG.png";
 import { useInView } from "react-intersection-observer";
 
 export default function Projects() {
@@ -12,10 +13,43 @@ export default function Projects() {
   const { ref: project3Ref, inView: inProject3View } = useInView();
   const { ref: project4Ref, inView: inProject4View } = useInView();
   const { ref: project5Ref, inView: inProject5View } = useInView();
+  const { ref: project6Ref, inView: inProject6View } = useInView();
 
   return (
     <section id="projects">
       <h2>Projects</h2>
+      <div
+        className={`project ${inProject6View ? "content-load-animation" : ""}`}
+        ref={project6Ref}
+      >
+        <img src={RAWGApp} alt="Weather App Image" className="image-mobile" />
+        <div className="project-explanation">
+          <h3>Volcanowalk RAWG</h3>
+          <p>
+            A website for searching through vast list of games provided by RAWG
+            API and adding games to wish lists. Created with HTML, JavaScript,
+            React, and Tailwind CSS. Developed with responsive design and
+            accessibility in mind.
+          </p>
+          <div className="project-links">
+            <a
+              href="https://github.com/Volcanowalk/personal-RAWG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CODE
+            </a>
+            <a
+              href="https://volcanowalk-rawg.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LIVE DEMO
+            </a>
+          </div>
+        </div>
+        <img src={RAWGApp} alt="Weather App Image" className="image-desktop" />
+      </div>
       <div
         className={`project ${inProject1View ? "content-load-animation" : ""}`}
         ref={project1Ref}

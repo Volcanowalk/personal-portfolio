@@ -12,16 +12,24 @@ import {
   FaJava,
   FaGitAlt,
   FaCog,
-  FaFigma,
-  FaNpm,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiEslint } from "react-icons/si";
 import { useInView } from "react-intersection-observer";
 
 export default function About() {
   const { ref: aboutRef, inView: inAboutView } = useInView();
   const { ref: skillsRef, inView: inSkillsView } = useInView();
+
+  const skillList = [
+    { icon: FaHtml5, text: "HTML" },
+    { icon: FaCss3Alt, text: "CSS" },
+    { icon: IoLogoJavascript, text: "JavaScript" },
+    { icon: FaReact, text: "React" },
+    { icon: FaMobileAlt, text: "Responsive Design" },
+    { icon: FaUniversalAccess, text: "Accessibility" },
+    { icon: FaGitAlt, text: "Git" },
+    { icon: FaCog, text: "RESTful API" },
+  ];
 
   return (
     <section id="about">
@@ -79,54 +87,16 @@ export default function About() {
         }`}
         ref={skillsRef}
       >
-        <div className="container-skill">
-          <FaHtml5 className="skill-image" aria-hidden="true" />
-          HTML
-        </div>
-        <div className="container-skill">
-          <FaCss3Alt className="skill-image" aria-hidden="true" />
-          CSS
-        </div>
-        <div className="container-skill">
-          <IoLogoJavascript className="skill-image" aria-hidden="true" />
-          JavaScript
-        </div>
-        <div className="container-skill">
-          <FaReact className="skill-image" aria-hidden="true" />
-          React
-        </div>
-        <div className="container-skill">
-          <FaMobileAlt className="skill-image" aria-hidden="true" />
-          Responsive Design
-        </div>
-        <div className="container-skill">
-          <FaUniversalAccess className="skill-image" aria-hidden="true" />
-          Accessibility
-        </div>
-        <div className="container-skill">
-          <FaJava className="skill-image" aria-hidden="true" />
-          Java
-        </div>
-        <div className="container-skill">
-          <FaGitAlt className="skill-image" aria-hidden="true" />
-          Git
-        </div>
-        <div className="container-skill">
-          <FaCog className="skill-image" aria-hidden="true" />
-          API
-        </div>
-        <div className="container-skill">
-          <FaFigma className="skill-image" aria-hidden="true" />
-          Figma
-        </div>
-        <div className="container-skill">
-          <FaNpm className="skill-image" aria-hidden="true" />
-          NPM
-        </div>
-        <div className="container-skill">
-          <SiEslint className="skill-image" aria-hidden="true" />
-          ESLint
-        </div>
+        {skillList.map((skill) => {
+          const Icon = skill.icon;
+
+          return (
+            <div className="container-skill">
+              <Icon className="skill-image" aria-hidden="true" />
+              {skill.text}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
