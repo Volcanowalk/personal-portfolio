@@ -1,5 +1,6 @@
 import "../styles/About.css";
 import ProfileImage from "../assets/profile-image.jpg";
+import Resume from "../assets/HeonSangLee_Resume_FrontEndDeveloper.pdf";
 import {
   FaGithub,
   FaLinkedin,
@@ -9,7 +10,6 @@ import {
   FaReact,
   FaUniversalAccess,
   FaMobileAlt,
-  FaJava,
   FaGitAlt,
   FaCog,
 } from "react-icons/fa";
@@ -74,7 +74,7 @@ export default function About() {
             >
               <FaLinkedin fontSize="4rem" />
             </a>
-            <a href="#">
+            <a href={Resume} alt="Download Link to resume" download>
               <FaFile fontSize="4rem" />
             </a>
           </div>
